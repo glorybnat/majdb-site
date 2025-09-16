@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root { --background: #FFF0DF; --foreground: #292524; }
+html { scroll-behavior: auto; }
+body { background: var(--background); color: var(--foreground); }
+
+.content { max-width: 72ch; }
+.content h1,.content h2,.content h3 { font-weight: 600; line-height: 1.2; margin-top: 1.6rem; margin-bottom: 0.8rem; }
+.content p { margin-block: 1rem; }
+.content a { color: #0f766e; text-decoration: underline; text-underline-offset: 3px; }
+.content ul, .content ol { padding-left: 1.2rem; margin: 0.75rem 0; }
+.content code { background: rgba(0,0,0,0.05); padding: 0.15rem 0.35rem; border-radius: 0.25rem; }
+.content pre { background: rgba(0,0,0,0.04); padding: 1rem; border-radius: 0.5rem; overflow: auto; }
+
+
+/* micro-interaction: wave emoji */
+@keyframes wave {
+	0% { transform: rotate(0deg); }
+	20% { transform: rotate(18deg); }
+	60% { transform: rotate(-8deg); }
+	100% { transform: rotate(0deg); }
+}
+
+.wave-once { animation: wave 700ms ease-in-out 1; transform-origin: 70% 70%; }
+.wave-hover:hover { animation: wave 700ms ease-in-out 1; transform-origin: 70% 70%; }
+
