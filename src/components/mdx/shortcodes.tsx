@@ -14,7 +14,7 @@ const styles: Record<NonNullable<CalloutProps["type"]>, { border: string; bg: st
 };
 
 export function Callout({ type = "info", title, children }: CalloutProps) {
-  const s = styles[type];
+  const s = styles[type] || styles.info; // Fallback to info style if type is invalid
   return (
     <div className={`my-4 rounded-md border ${s.border} ${s.bg} p-3`}> 
       {title && <div className="mb-1 text-sm font-semibold">{title}</div>}
