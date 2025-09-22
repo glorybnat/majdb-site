@@ -130,7 +130,7 @@ export function HomeClient({
 
         <footer id="footer" className="mt-8">
           <Stagger stagger={0.15}>
-            <Item duration={0.1}><p className="text-xs text-foreground/60">© {new Date().getFullYear()} glorybnat</p></Item>
+            <Item duration={0.1}><p className="text-xs text-foreground/60">© {new Date().getFullYear()} glorybnat • <a href="https://github.com/glorybnat/majdb-site" target="_blank" rel="noreferrer" className="hover:underline text-foreground/80">source code</a></p></Item>
           </Stagger>
         </footer>
       </Stagger>
